@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalle Producto</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a href="index.html" class="back-btn">⬅ Volver</a>
+<section class="detalle">
+  <div class="detalle-container">
+
+    <!-- 🔍 IMAGEN CON ZOOM -->
+    <div class="zoom-container">
+      <img id="imgProducto">
+    </div>
+
+    <!-- 📄 INFO PRODUCTO -->
+    <div class="info">
+      <h1 id="nombre"></h1>
+
+      <p id="descripcion"></p>
+
+      <p><strong>Origen:</strong> <span id="origen"></span></p>
+      <p><strong>Tipo:</strong> <span id="tipo"></span></p>
+
+      <br>
+
+      <a id="btnWhats" class="btn">Consultar por WhatsApp</a>
+
+      <br><br>
+
+      <a id="btnCorreo" class="btn">Enviar correo</a>
+    </div>
+
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

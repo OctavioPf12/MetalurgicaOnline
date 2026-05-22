@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Catálogo</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+
+<body>
+<header class="topbar">
+  <button class="menu-toggle" id="menuToggle">☰</button>
+
+  <div class="logo">Tienda Catálogo</div>
+
+  <div class="search-container">
+    <input type="text" id="buscador" placeholder="Buscar productos...">
+    <button id="btnBuscar">🔍</button>
+  </div>
+
+  <div class="contacto">
+    <a id="btnWhatsTop" target="_blank" class="button">
+      <span>📱 WhatsApp<br>+505 8712-0478</span>
+    </a>
+
+    <a id="btnCorreoTop" class="button">
+      <span>✉️ Correo<br>juegomodus@gmail.com</span>
+    </a>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <button onclick="cargarProductos(); cerrarMenuMobile();">Inicio</button>
+  <button onclick="filtrarCategoria('sillas'); cerrarMenuMobile();">Sillas</button>
+  <button onclick="filtrarCategoria('pupitres'); cerrarMenuMobile();">Pupitres</button>
+  <button onclick="filtrarCategoria('camas'); cerrarMenuMobile();">Camas</button>
+  <button onclick="filtrarCategoria('tanques'); cerrarMenuMobile();">Tanques</button>
+  <button onclick="filtrarCategoria('parques'); cerrarMenuMobile();">Parques</button>
+  <button onclick="filtrarCategoria('soldadura'); cerrarMenuMobile();">Soldadura</button>
+</nav>
+
+<!-- VIDEO -->
+<section class="hero-video">
+  <video autoplay muted loop playsinline>
+    <source src="img/video.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay">
+    <h1>Catálogo de Sillas</h1>
+    <p>Diseño moderno y comodidad</p>
+  </div>
+</section>
+
+<!-- SLIDER -->
+<section class="catalogo-slider-section">
+  <div class="catalogo-slider">
+    <div class="slider-imagen">
+      <img id="sliderCategoriaImg" src="img/silla1.jpg" alt="Categoría">
+    </div>
+
+    <div class="slider-info">
+      <p class="slider-tag">Catálogo destacado</p>
+      <h2 id="sliderCategoriaTitulo">Sillas</h2>
+      <p id="sliderCategoriaDescripcion">
+        Diseños modernos y funcionales para distintos espacios.
+      </p>
+
+      <div class="slider-botones">
+        <button id="btnVerCatalogo" class="slider-btn-principal">Ver catálogo →</button>
+        <button id="btnVerTodosProductos" class="slider-btn-secundario">Ver todo</button>
+        <button id="btnAnteriorCategoria" class="slider-btn-secundario">Anterior</button>
+        <button id="btnSiguienteCategoria" class="slider-btn-secundario">Siguiente</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section id="productos">
+  <div class="grid"></div>
+  <div id="paginacionProductos" class="paginacion-productos"></div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>
